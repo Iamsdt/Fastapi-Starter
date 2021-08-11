@@ -16,7 +16,8 @@ TORTOISE_ORM = {
             host=get_settings().POSTGRESQL_HOSTNAME,
             port=get_settings().POSTGRESQL_PORT,
             db=get_settings().POSTGRESQL_DATABASE,
-        )
+        ),
+        "logDB": "sqlite://:memory:",
     },  # postgresql
     # "connections": {"default": "mysql://root:123456@127.0.0.1:3306/test"}, # mysql connections
     # "connections": {"default": "sqlite://:memory:"}, # sqlite in memory database

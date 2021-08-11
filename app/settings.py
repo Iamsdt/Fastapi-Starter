@@ -9,7 +9,7 @@ IS_PRODUCTION = False
 
 
 class Settings(BaseSettings):
-    APP_NAME: str = "Podcast"
+    APP_NAME: str = "FastAPI Starter"
     APP_VERSION: str = "1.0.0"
     debug: bool
 
@@ -45,7 +45,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = "app/utils/envs/debug.env"
         env_file_encoding = 'utf-8'
-        allow_mutation = False
+        allow_mutation = True
 
 
 @lru_cache()

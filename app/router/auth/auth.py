@@ -1,11 +1,12 @@
-from fastapi import APIRouter, Form, Depends
-from fastapi.security import OAuth2PasswordRequestForm
-
-from app.repo.auth import get_password_hash, generate_token, get_current_user
 from app.db.user_model import UserTable, UserTable_Pydantic
-from app.repo.output_schemas import OutputResponse, successful_response, SingleMessageSchemas
-from app.repo.schemas.user_schemas import VerifyAccount, TokenSchemas
-from app.router.auth.auth_helper import update_user_token, check_login, check_client
+from app.repo.auth import generate_token, get_current_user, get_password_hash
+from app.repo.output_schemas import (OutputResponse, SingleMessageSchemas,
+                                     successful_response)
+from app.repo.schemas.user_schemas import TokenSchemas, VerifyAccount
+from app.router.auth.auth_helper import (check_client, check_login,
+                                         update_user_token)
+from fastapi import APIRouter, Depends, Form
+from fastapi.security import OAuth2PasswordRequestForm
 
 router = APIRouter(
     prefix="/auth",

@@ -52,7 +52,6 @@ class DeviceTable(models.Model):
 
 
 DeviceTable_Pydantic = pydantic_model_creator(DeviceTable, name="DeviceTable")
-DeviceTable_Pydantic_List = pydantic_queryset_creator(DeviceTable, name="DeviceTableList")
 
 
 # Login History
@@ -78,4 +77,3 @@ class LoginHistoryTable(models.Model):
 
 
 LoginHistoryTable_Pydantic = pydantic_model_creator(LoginHistoryTable, name="LoginHistoryTable")
-LoginHistoryTable_Pydantic_List = pydantic_queryset_creator(LoginHistoryTable, name="LoginHistoryTableList")

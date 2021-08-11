@@ -36,4 +36,3 @@ class UserTable(models.Model):
 
 
 UserTable_Pydantic = pydantic_model_creator(UserTable, name="User")
-UserTable_Pydantic_List = pydantic_queryset_creator(UserTable, name="UserList")
